@@ -25,7 +25,7 @@ Route::get('/', function () {
 //Authentication Routes
 Route::get('auth/login', 'Auth\LoginController@getLogin');
 Route::get('auth/login', 'Auth\LoginController@postLogin');
-Route::get('auth/logout', 'Auth\LoginController@getLogout');
+Route::get('auth/logout', 'Auth\LoginController@getSignOut');
 
 //Registration Routes
 Route::get('auth/register', 'Auth\RegisterController@getRegister');
@@ -35,3 +35,6 @@ Route::get('contact','PagesController@getContact');
 Route::get('about','PagesController@getAbout');
 Route::get('/','PagesController@getIndex');
 Route::resource('posts','PostController');
+
+Route::auth();
+//Auth::routes();

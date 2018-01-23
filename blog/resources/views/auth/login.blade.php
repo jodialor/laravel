@@ -5,6 +5,12 @@
 @section('content')
       <div class="row">
         <div class="col-md-6 col-md-offset-3">
+          <h1>Login</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
           {!! Form::open() !!}
 
             {{ Form::label('email', 'Email:') }}
@@ -18,7 +24,7 @@
             {{ Form::submit('Login', ['class' => 'btn btn-primary btn-block form-spacing-top']) }}
 
             <p><a href="{{ url('password/reset') }}">Forgot My Password</a>
-              
+
           {!! Form::close() !!}
         </div>
       </div>

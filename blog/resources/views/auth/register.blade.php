@@ -5,6 +5,12 @@
 @section('content')
       <div class="row">
         <div class="col-md-6 col-md-offset-3">
+          <h1>Registration</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
           {!! Form::open() !!}
 
             {{ Form::label('name', 'Name:') }}
@@ -16,8 +22,8 @@
             {{ Form::label('password', 'Password:') }}
             {{ Form::password('password', ['class' => 'form-control']) }}
 
-            {{ Form::label('password_conf', 'Confirm Password:') }}
-            {{ Form::password('password_conf', ['class' => 'form-control']) }}
+            {{ Form::label('password_confirmation', 'Confirm Password:') }}
+            {{ Form::password('password_confirmation', ['class' => 'form-control']) }}
 
             <br>
             {{ Form::submit('Register', ['class' => 'btn btn-primary btn-block form-spacing-top']) }}
