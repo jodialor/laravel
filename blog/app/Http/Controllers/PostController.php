@@ -13,7 +13,8 @@ class PostController extends Controller
 {
     public function __construct()
     {
-        //$this->middleware('auth');
+        // Permitir que só os utilizadores com login acedam aos posts
+        $this->middleware('auth');
     }
     /**
      * Display a listing of the resource.
